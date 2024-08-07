@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-FlightAppEF", "WPF-FlightAppEF.csproj", "{A6BDFF42-6FDC-4021-91FB-D860F446C3BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6BDFF42-6FDC-4021-91FB-D860F446C3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BDFF42-6FDC-4021-91FB-D860F446C3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BDFF42-6FDC-4021-91FB-D860F446C3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BDFF42-6FDC-4021-91FB-D860F446C3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F50BFC76-A39E-405C-A145-0292337E1260}
+	EndGlobalSection
+EndGlobal
