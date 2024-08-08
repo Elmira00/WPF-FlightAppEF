@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_FlightAppEF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="900">
+        Title="MainWindow" >
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
@@ -47,7 +47,7 @@
                 
                 <ComboBox
             ItemsSource="{Binding Schedules}"
-            DisplayMemberPath="Id"
+            DisplayMemberPath="StartDateTime"
             SelectedValuePath="Id"
             SelectedValue="{Binding SelectedScheduleId, Mode=TwoWay}"
                     Margin="5"
@@ -61,7 +61,8 @@
                     Margin="5"
                     FontSize="20"
                      Grid.Column="2" Grid.Row="1"/>
-                 <ComboBox
+                
+                <ComboBox
             ItemsSource="{Binding FlightTypes}"
             DisplayMemberPath="Type"
             SelectedValuePath="Id"
@@ -69,16 +70,16 @@
                     Margin="5"
                     FontSize="20"
                      Grid.Column="4" Grid.Row="1"/>
-
-
-                <TextBlock  Grid.ColumnSpan="2"  Foreground="#EEEEEE" FontSize="20" Text="Pilot Info" Grid.Column="0" Grid.Row="2" Background="#11363F" Padding="10" Margin="5,10" />
-                <Button   Foreground="#EEEEEE" FontSize="20" Content="Purchase" Grid.Column="0" Grid.Row="3" Background="#76ABAE" Padding="5"  Margin="5 20" />
+                <TextBlock  Text="{Binding Pilot.Info,Mode=TwoWay}" Grid.ColumnSpan="2"  Foreground="#EEEEEE" FontSize="20" Grid.Column="0" Grid.Row="2" Background="#11363F" Padding="10" Margin="5,10" />
+                <Button Click="OpenTicketUC_Click"  Foreground="#EEEEEE" FontSize="20" Content="Purchase" Grid.Column="0" Grid.Row="3" Background="#76ABAE" Padding="5"  Margin="5 20" />
+              
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="1" Background="#31363F" >
             <Grid>
-                <Label FontSize="30" Content="Tickets here" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#EEEEEE"></Label>
-       </Grid>
+                <Label FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#EEEEEE"></Label>
+                <ContentControl x:Name="ContentContainer" />
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

@@ -11,9 +11,11 @@ namespace WPF_FlightAppEF
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Threading.Tasks;
+
     public partial class Ticket
     {
+       
         public int Id { get; set; }
         public int ScheduleId { get; set; }
         public int FlightTypeId { get; set; }

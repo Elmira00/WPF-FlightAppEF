@@ -14,15 +14,27 @@ namespace WPF_FlightAppEF
     
     public partial class Pilot
     {
+        private Pilot pilot;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pilot()
         {
             this.Schedules = new HashSet<Schedule>();
         }
-    
+
+        public Pilot(Pilot pilot)
+        {
+            this.pilot = pilot;
+            this.Name = pilot.Name;
+            this.Surname = pilot.Surname;
+            this.Schedules = pilot.Schedules;
+            this.Id = pilot.Id;
+            this.Info = $"I N F O\nName : {this.Name}\nSurname : {this.Surname}";
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Info { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedules { get; set; }
